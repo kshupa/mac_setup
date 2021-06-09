@@ -45,11 +45,12 @@ CASKS=(
     dropbox
     discord
     webcatalog
-    vivaldi
+    brave-browser
+    keka
     signal
 )
 echo "Installing cask apps..."
-brew cask install ${CASKS[@]}
+brew install ${CASKS[@]}
 
 # Install mas apps
 MAS=(          
@@ -57,7 +58,10 @@ MAS=(
     1193539993  # Brother iPrint&Scan                                
     441258766   # Magnet
     1278508951  # Trello
-    409201541   # Pages                             
+    409201541   # Pages
+    409203825   # Numbers
+    1352778147  # Bitwarden
+    1444383602  # GoodNotes
     )
 
 echo "Intalling mas apps..."
