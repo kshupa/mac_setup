@@ -2,11 +2,13 @@
 # Setup script for setting up a new macos machine
 # To execute: save and `chmod +x ./brew-install-script.sh` then `./brew-install-script.sh`
 
+# VS Code themes: Tokyo Night, Ayu, FireFly Pro, One Dark Pro, Material Icon Theme
+
+
 echo "Starting setup"
 
 # install xcode CLI
 #xcode-select —-install
-
 
 # Check for Homebrew to be present, install if it's missing
 if test ! $(which brew); then
@@ -59,7 +61,7 @@ MAS=(
 echo "Intalling mas apps..."
 mas install ${MAS[@]}
 
-# Install Source Code Pro Font
+# Install Fonts
 echo "Installing fonts fira and cascadian …"
 brew install font-fira-code font-cascadia-code font-cascadia-mono
 
