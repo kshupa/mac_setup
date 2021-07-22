@@ -5,13 +5,13 @@
 echo "Starting setup"
 
 # install xcode CLI
-xcode-select —-install
+#xcode-select —-install
 
 
 # Check for Homebrew to be present, install if it's missing
 if test ! $(which brew); then
     echo "Installing homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
 fi
 
 # Update homebrew recipes
@@ -25,32 +25,24 @@ PACKAGES=(
     git
     readline
     pyenv
-)
-echo "Installing packages..."
-
-brew install ${PACKAGES[@]}
-
-# link readline
-brew link --force readline
-
-echo "Installing cask..."
-CASKS=(
-    iterm2
     slack
+    brave-browser
     visual-studio-code
+    sublime-text
     istat-menus
     private-internet-access
     bitwarden
     cheatsheet
     dropbox
     discord
-    webcatalog
-    brave-browser
     keka
     signal
+    webcatalog
+    iterm2
 )
-echo "Installing cask apps..."
-brew install ${CASKS[@]}
+echo "Installing packages..."
+
+brew install ${PACKAGES[@]}
 
 # Install mas apps
 MAS=(          
@@ -68,9 +60,8 @@ echo "Intalling mas apps..."
 mas install ${MAS[@]}
 
 # Install Source Code Pro Font
-echo "Installing font source code pro …"
-brew tap homebrew/cask-fonts
-brew cask install font-source-code-pro
+echo "Installing fonts fira and cascadian …"
+brew install font-fira-code font-cascadia-code font-cascadia-mono
 
 echo "Cleaning up..."
 brew cleanup
