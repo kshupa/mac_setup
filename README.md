@@ -1,3 +1,3 @@
 # mac_setup
 
-my little script for clean mac installation
+my little scripts for clean mac setup and app-cleaner
