@@ -39,8 +39,7 @@ PACKAGES=(
     discord
     keka
     signal
-    webcatalog
-    iterm2
+    rectangle
 )
 echo "Installing packages..."
 
