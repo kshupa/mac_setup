@@ -40,6 +40,10 @@ PACKAGES=(
     keka
     signal
     rectangle
+    keepingyouawake
+    vorta
+    irvue
+    
 )
 echo "Installing packages..."
 
